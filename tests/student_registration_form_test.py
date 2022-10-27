@@ -3,6 +3,12 @@ from allure_commons.types import Severity
 from demoqa.models.controls import datepicker
 from demoqa.models.pages.automation_practice_form import *
 from utils import attach
+from pathlib import Path
+
+def resource(relative_path) -> str:
+    path = str(Path(__file__).parent.parent.joinpath('resources').joinpath(relative_path))
+    return path
+
 
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
@@ -27,8 +33,9 @@ def test_practice_form():
             set_subject('Arts', 'English')
             set_hobbies('Sports', 'Music')
         with allure.step('Добавить изображение'):
-            set_photo('../resources/siegfriedsassoon.jpg')
+            #set_photo('../resources/siegfriedsassoon.jpg')
             #set_photo('siegfriedsassoon.jpg')
+            set_photo(resource('siegfriedsassoon.jpg'))
         with allure.step('Добавить адрес'):
             set_address('Peterburg, Moskowsky 16') #simple text
             select_state('Haryana')
