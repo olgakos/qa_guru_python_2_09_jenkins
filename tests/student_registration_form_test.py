@@ -5,10 +5,10 @@ from demoqa.models.pages.automation_practice_form import *
 from utils import attach
 from pathlib import Path
 
+#для загрузки изображения
 def resource(relative_path) -> str:
     path = str(Path(__file__).parent.parent.joinpath('resources').joinpath(relative_path))
     return path
-
 
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
