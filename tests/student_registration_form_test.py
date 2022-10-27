@@ -6,8 +6,9 @@ from utils import attach
 
 from pathlib import Path
 
-@allure.tag("web")
+
 #@allure.title('Successful fill form')
+@allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "OlgaKos")
 @allure.description("demoqa")
