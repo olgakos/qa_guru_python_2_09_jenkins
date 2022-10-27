@@ -11,7 +11,7 @@ from utils import attach
 @allure.feature("Student Registration Form")
 @allure.story("Проверка формы регистрации студента")
 @allure.link("https://demoqa.com/automation-practice-form")
-
+@allure.title('Заполнение формы регистрации')
 def test_practice_form():
         with allure.step('Открываем регистрационную форму студента'):
             open_page('https://demoqa.com', '/automation-practice-form')
@@ -28,6 +28,7 @@ def test_practice_form():
             set_hobbies('Sports', 'Music')
         with allure.step('Добавить изображение'):
             set_photo('../resources/siegfriedsassoon.jpg')
+            #set_photo('siegfriedsassoon.jpg')
         with allure.step('Добавить адрес'):
             set_address('Peterburg, Moskowsky 16') #simple text
             select_state('Haryana')
