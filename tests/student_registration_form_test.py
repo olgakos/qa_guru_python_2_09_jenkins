@@ -17,17 +17,19 @@ from pathlib import Path
 @allure.link("https://demoqa.com/automation-practice-form")
 def test_practice_form(setup_browser):
 
-    browser = setup_browser
+    browser = setup_browser #!
     
-    with allure.step('Открываем страницу регистрации'):
-        open_page('https://demoqa.com', '/automation-practice-form')
-
-    with allure.step('Fix Add Banners'):
+    with allure.step('Открыть форму регистрации'): 
+        #open_page('https://demoqa.com', '/automation-practice-form')
+        browser.open('https://demoqa.com/automation-practice-form') #!
         browser.element('.practice-form-wrapper').should(have.text('Student Registration Form'))
+
+    with allure.step('Fix Add Banners'):        
         browser.driver.execute_script("$('#fixedban').remove()")
+        browser.driver.execute_script("$('footer').remove()")       
 
     # WHEN
-    with allure.step('Внести данные'):
+    with allure.step('Заполнить форму регистрации'):
         set_first_name('Olga')
         set_last_name('Kos')
         set_email('test@test.uk')
