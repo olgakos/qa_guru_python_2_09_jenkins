@@ -15,7 +15,10 @@ from pathlib import Path
 @allure.feature("Student Registration Form")
 @allure.story("Проверка формы регистрации студента")
 @allure.link("https://demoqa.com/automation-practice-form")
-def test_practice_form():
+def test_practice_form(setup_browser):
+
+    browser = setup_browser
+    
     with allure.step('Открываем страницу регистрации'):
         open_page('https://demoqa.com', '/automation-practice-form')
 
