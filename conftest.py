@@ -48,8 +48,8 @@ def setup_browser(request):
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
-    #browser = Browser(Config(driver)) #loc
-    browser.config.driver = driver #remote
+    browser = Browser(Config(driver)) #loc
+    #browser.config.driver = driver #remote
 
     yield browser
 
