@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selene import Browser, Config
 from dotenv import load_dotenv
 
-from selene.support.shared import browser # !remote
+#from selene.support.shared import browser # !remote
 
 from utils import attach
 
@@ -48,8 +48,8 @@ def setup_browser(request):
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
-    #browser = Browser(Config(driver)) #loc
-    browser.config.driver = driver #remote
+    browser = Browser(Config(driver)) #loc
+    #browser.config.driver = driver #remote
 
     yield browser
 
