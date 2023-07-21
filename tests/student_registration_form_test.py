@@ -22,6 +22,10 @@ def test_practice_form(setup_browser):
     with allure.step('Открываем страницу регистрации'):
         open_page('https://demoqa.com', '/automation-practice-form')
 
+    with allure.step('Fix Add Banners'):
+        browser.element('.practice-form-wrapper').should(have.text('Student Registration Form'))
+        browser.driver.execute_script("$('#fixedban').remove()")
+
     # WHEN
     with allure.step('Внести данные'):
         set_first_name('Olga')
