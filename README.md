@@ -14,7 +14,10 @@ Jenkins demo
   https://jenkins.autotests.cloud/job/002-flo_relle-guru_python_2_09_jenkins/
 * Сборки Дженкинс хранятся на сервере 60 дней. Затем нужно пересоздавать скрипт заново
 * В данном примере логин/пароль для Докера Селеноида генерируется напрямую в скрипте Дженкинс. data-файл `.env` в в репозитории отсутствует. 
-  
+
+### TODO
+ * Message: 'chromedriver' executable needs to be in PATH
+ * Pull it drom GitHUB
 -----------------
 <br>v1 2022-10-25
 <br>v2 2023-07-21
