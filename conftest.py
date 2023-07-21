@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selene import Browser, Config
 from dotenv import load_dotenv
 
-from selene.support.shared import browser #! my
+from selene.support.shared import browser #!my
 
 from utils import attach
 
