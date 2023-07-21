@@ -2,10 +2,10 @@ import allure
 from allure_commons.types import Severity
 from demoqa.models.controls import datepicker
 from demoqa.models.pages.automation_practice_form import *
-from utils import attach
+
+#from utils import attach !!
 
 from pathlib import Path
-
 
 #@allure.title('Successful fill form')
 @allure.tag("web")
