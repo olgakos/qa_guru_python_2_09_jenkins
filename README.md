@@ -17,7 +17,7 @@ Jenkins demo
 
 ### TODO
  * Message: 'chromedriver' executable needs to be in PATH
- * Pull it drom GitHUB
+ * Pull it from GitHUB
 -----------------
 <br>v1 2022-10-25
 <br>v2 2023-07-21
